@@ -1,20 +1,16 @@
-import { MATCHED_PATH_HEADER } from "next/dist/lib/constants";
 import { ReactNode } from "react";
 
 export default function AboutLayout({ children }: { children: ReactNode }) {
-    return (
-        <div>
-            <div>
-                {children}
-            </div>
-            <div className="mt-8">
-                <h1 className="mb-4 text-xl font-bold">you may also like</h1>
-
-                <ul>
-                    <li>frist blog post</li>
-                    <li>second blog post</li>
-                </ul>
-            </div>
-        </div>
-    );
+  return (
+    <div className="space-y-6">
+      <div>{children}</div>
+      <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-800">
+        <h2 className="mb-3 text-lg font-semibold">You may also like</h2>
+        <ul className="list-disc space-y-2 pl-5 text-sm text-gray-600 dark:text-gray-300">
+          <li>First blog post</li>
+          <li>Second blog post</li>
+        </ul>
+      </div>
+    </div>
+  );
 }

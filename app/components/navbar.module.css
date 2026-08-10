@@ -1,5 +1,0 @@
-@reference "../../app/globals.css";
-
-.link {
-    @apply p-1 md:p-2 hover:text-blue-500 text-sm md:text-base transition-colors duration-200;
-}

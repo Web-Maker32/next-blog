@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Geist } from "next/font/google";
+import { Roboto, Geist } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { Providers } from "./providers";
-import Chatbot from "./components/chatbot";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const inter = Inter({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,11 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("h-full", "font-sans", geist.variable)} suppressHydrationWarning>
       <body
-        className={`${roboto.className} antialiased min-h-screen flex flex-col`}
+        className={`${roboto.className} antialiased min-h-screen flex flex-col text-slate-900 dark:text-slate-100`}
       >
         <Providers>
           <Header />
-          <Chatbot />
           <main className="grow container mx-auto px-4 py-8 mt-12">
             {children}
           </main>

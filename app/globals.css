@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-  @apply bg-gray-900 text-gray-200
+  @apply bg-slate-900 text-slate-200
 }
 
 /* For modern browsers (Firefox) */
