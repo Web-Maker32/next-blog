@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("h-full", "font-sans", geist.variable)} suppressHydrationWarning>
       <body
-        className={`${roboto.className} antialiased min-h-screen flex flex-col text-slate-900 dark:text-slate-100`}
+        className={`${roboto.className} antialiased min-h-screen flex flex-col bg-slate-950 text-slate-100`}
       >
         <Providers>
           <Header />

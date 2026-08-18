@@ -12,15 +12,18 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
     return (
-        <div className="p-20">
-            <h1 className="text-4xl font-bold mb-10">Projects</h1>
+        <div className="px-4 py-8 sm:px-2 lg:px-8">
+            <div className="mx-auto max-w-6xl">
+                <h1 className="mb-6 text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Projects</h1>
 
-            <div className="text-1xl font-bold mb-10">These are my projects</div>
+                <div className="mb-10 max-w-3xl text-lg text-gray-700 dark:text-gray-300">
+                    Selected work showing product design, frontend development, and end-to-end delivery.
+                </div>
 
-            <Suspense fallback={<ProjectListLoading />}>
-                <ProjectsList />
-            </Suspense>
-
+                <Suspense fallback={<ProjectListLoading />}>
+                    <ProjectsList />
+                </Suspense>
+            </div>
         </div>
     )
 }
